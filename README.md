@@ -4,7 +4,7 @@ Como as imagens do MySQL já estão presentes no repositório oficial do Docker,
 Para criar um novo container com o MySQL basta digitar o código abaixo no prompt de comando:
 
 ```
-docker volume mysql_data
+docker volume create mysql_data
 docker run -it --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v mysql_data:/data -d mysql
 ```
 
