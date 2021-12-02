@@ -4,10 +4,7 @@ Como as imagens do MySQL já estão presentes no repositório oficial do Docker,
 
 Para criar um novo container com o MySQL basta digitar o código abaixo no prompt de comando:
 ```
-docker run --name nome-do-container  \
--p 3306:3306 -p 33060:33060  \
--e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='sua-senha'   \
--d mysql/mysql-server:latest
+docker run --name nome-do-container -p 3306:3306 -p 33060:33060  -e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='sua-senha' -d mysql/mysql-server:latest
 ```
 
 Neste código acima já embutimos algumas configurações essenciais para a criação do container. No lugar de nome-do-container você deve colocar o nome que você quer dar para esse container e no lugar de sua-senha a senha para acessar o mysql com usuário root. O :latest do final serve para instalar a versão mais recente, assim como o -p para configurar as portas que serão utilizadas.
